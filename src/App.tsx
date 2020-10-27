@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+// import Greetings from "./components/Greetings";
+// import CounterUseState from "./components/CounterUseState";
+// import CounterUseReducer from "./components/CounterUseReducer";
+import MyForm from "./components/MyForm";
+// import ReducerSample from "./components/ReducerSample";
 
+
+// const App: React.FC = () => {
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const onClick = (name:string) => {
+    //     console.log(`${name} say hello`);
+    // }
+    //
+    const onSubmit = (form:{name: string, description: string}) => {
+        console.log(form);
+    };
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                {/*<Greetings name='world' onClick={onClick}/>*/}
+                {/*<CounterUseState/>*/}
+                {/*<CounterUseReducer/>*/}
+                <MyForm onSubmit={onSubmit} />
+                {/*<ReducerSample/>*/}
+            </header>
+        </div>
+    );
 }
+
 
 export default App;
